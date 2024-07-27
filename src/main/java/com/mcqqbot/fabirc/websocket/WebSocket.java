@@ -20,7 +20,7 @@ public class WebSocket extends WebSocketClient {
 
     @Override
     public void onOpen(ServerHandshake handshakedata) {
-
+        LOGGER.info("Connected to server");
     }
 
     @Override
@@ -32,7 +32,7 @@ public class WebSocket extends WebSocketClient {
 
     @Override
     public void onClose(int code, String reason, boolean remote) {
-
+        LOGGER.info("disconnected to server");
     }
 
     @Override
