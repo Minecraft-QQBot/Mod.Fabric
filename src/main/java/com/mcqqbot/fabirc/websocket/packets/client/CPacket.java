@@ -1,4 +1,4 @@
-package com.mcqqbot.fabirc.websocket.packets;
+package com.mcqqbot.fabirc.websocket.packets.client;
 
 import com.google.gson.Gson;
 import org.slf4j.Logger;
@@ -33,10 +33,12 @@ public class CPacket {
     public SPacket run() {
         switch (this.getType()) {
             case "command":
-                CExecuteCommand packet = new CExecuteCommand(gson.toJson(this));
-                return packet.run();
+                CExecuteCommand executeCommandPacket = new CExecuteCommand(gson.toJson(this));
+                return executeCommandPacket.run();
             case "message":
+                CSendMessage sendMessagePacket = new CSendMessage(gson.toJson(this));
             case "player_list":
+                CGetPlayerList playerListPacket = new CGetPlayerList(gson.toJson(this));
 
         }
         return null;

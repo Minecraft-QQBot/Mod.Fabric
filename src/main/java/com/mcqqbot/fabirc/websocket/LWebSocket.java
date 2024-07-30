@@ -1,6 +1,6 @@
 package com.mcqqbot.fabirc.websocket;
 
-import com.mcqqbot.fabirc.websocket.packets.CPacket;
+import com.mcqqbot.fabirc.websocket.packets.client.CPacket;
 import org.java_websocket.client.WebSocketClient;
 import org.java_websocket.handshake.ServerHandshake;
 import org.slf4j.Logger;
@@ -11,10 +11,10 @@ import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 import java.util.Map;
 
-public class WebSocket extends WebSocketClient {
+public class LWebSocket extends WebSocketClient {
     public static final Logger LOGGER = LoggerFactory.getLogger("minecraft-qqbot");
 
-    public WebSocket(URI serverUri, Map<String, String> httpHeaders) {
+    public LWebSocket(URI serverUri, Map<String, String> httpHeaders) {
         super(serverUri, httpHeaders);
     }
 

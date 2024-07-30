@@ -1,4 +1,4 @@
-package com.mcqqbot.fabirc.websocket.packets;
+package com.mcqqbot.fabirc.websocket.packets.client;
 
 import com.mcqqbot.fabirc.MinecraftQQBot;
 import net.minecraft.server.PlayerManager;
@@ -7,6 +7,9 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import java.util.List;
 
 public class CGetPlayerList extends CPacket{
+    public CGetPlayerList(String json) {
+        super(json);
+    }
     @Override
     public SPacket run() {
         LOGGER.info("GetPlayerList");

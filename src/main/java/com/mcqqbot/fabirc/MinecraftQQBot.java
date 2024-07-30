@@ -1,9 +1,12 @@
 package com.mcqqbot.fabirc;
 
 import com.google.gson.Gson;
-import com.mcqqbot.fabirc.websocket.WebSocket;
+import com.mcqqbot.fabirc.websocket.LWebSocket;
+import com.mcqqbot.fabirc.websocket.SWebSocket;
+import com.mcqqbot.fabirc.websocket.packets.server.SPlayerJoin;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.server.MinecraftServer;
 import org.slf4j.Logger;
@@ -23,8 +26,8 @@ public class MinecraftQQBot implements ModInitializer {
 	// It is considered best practice to use your mod id as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.
     public static final Logger LOGGER = LoggerFactory.getLogger("minecraft-qqbot");
-	public static WebSocket LwebSocket;
-	public static WebSocket SwebSocket;
+	public static LWebSocket lwebSocketC;
+	public static SWebSocket SwebSocket;
 	public static MinecraftServer minecraftServer;
 	@Override
 	public void onInitialize() {
@@ -60,13 +63,14 @@ public class MinecraftQQBot implements ModInitializer {
 //		header.put("token", config.token);
 //		header.put("name", config.name);
 		try {
-			LwebSocket = new WebSocket(new URI(config.url + "/websocket/minecraft"), header);
-			LwebSocket.connect();
-			SwebSocket = new WebSocket(new URI(config.url + "/websocket/bot"), header);
+			lwebSocketC = new LWebSocket(new URI(config.url + "/websocket/minecraft"), header);
+			lwebSocketC.connect();
+			SwebSocket = new SWebSocket(new URI(config.url + "/websocket/bot"), header);
 			SwebSocket.connect();
 		} catch (URISyntaxException e) {
 			throw new RuntimeException(e);
 		}
+
 	}
 }
 class H {

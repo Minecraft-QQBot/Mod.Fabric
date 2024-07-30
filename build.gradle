@@ -31,6 +31,7 @@ loom {
 }
 
 dependencies {
+	//modImplementation "com.github.gnembon:fabric-carpet:1.4.112"
 	// To change the versions see the gradle.properties file
 	include(implementation('org.java-websocket:Java-WebSocket:1.5.7'))
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
@@ -85,5 +86,8 @@ publishing {
 		// Notice: This block does NOT have the same function as the block in the top level.
 		// The repositories here will be used for publishing your artifact, not for
 		// retrieving dependencies.
+		maven {
+			url 'https://jitpack.io'
+		}
 	}
 }

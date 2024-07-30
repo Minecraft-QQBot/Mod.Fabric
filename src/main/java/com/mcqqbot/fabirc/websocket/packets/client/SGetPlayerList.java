@@ -1,4 +1,4 @@
-package com.mcqqbot.fabirc.websocket.packets;
+package com.mcqqbot.fabirc.websocket.packets.client;
 
 public class SGetPlayerList extends SPacket{
 

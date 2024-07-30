@@ -1,4 +1,4 @@
-package com.mcqqbot.fabirc.websocket.packets;
+package com.mcqqbot.fabirc.websocket.packets.server;
 
 import com.google.gson.Gson;
 import com.mcqqbot.fabirc.MinecraftQQBot;
@@ -8,15 +8,15 @@ import org.slf4j.LoggerFactory;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
-public class SPacket {
+public class CPacket {
     public boolean success;
-    public String[] data;
+    //public String[] data;
     Gson gson = new Gson();
     public static final Logger LOGGER = LoggerFactory.getLogger("minecraft-qqbot");
 
-    public SPacket(boolean success, String[] data) {
+    public CPacket(boolean success) {
         this.success = success;
-        this.data = data;
+        //this.data = data;
     }
 
     public boolean run() {
@@ -28,8 +28,10 @@ public class SPacket {
         return success;
     }
 
+    /*
     public String[] getData() {
         return data;
     }
+    */
 
 }
