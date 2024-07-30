@@ -1,32 +1,32 @@
-# McdReforged
+# Fabric
 
-Óë [BotServer](https://github.com/Minecraft-QQBot/BotServer) ½øÐÐ¶Ô½ÓµÄ Mcdr ²å¼þ¡£
+ä¸Ž [BotServer](https://github.com/Minecraft-QQBot/BotServer) è¿›è¡Œå¯¹æŽ¥çš„ Fabirc modã€‚
 
-Äã¿ÉÒÔµ½ [Releases](https://github.com/Minecraft-QQBot/Fabric/releases) ÏÂÔØ×îÐÂ°æ±¾ Fabric ·þÎñÆ÷²å¼þ¡£
+ä½ å¯ä»¥åˆ° [Releases](https://github.com/Minecraft-QQBot/Fabric/releases) ä¸‹è½½æœ€æ–°ç‰ˆæœ¬ Fabric æœåŠ¡å™¨æ’ä»¶ã€‚
 
-## ¹¦ÄÜ
+## åŠŸèƒ½
 
-- ÓëBotServerÏîÄ¿Áª¶¯
+- ä¸ŽBotServeré¡¹ç›®è”åŠ¨
 
-## °²×°²å¼þ
+## å®‰è£…æ’ä»¶
 
-- Óë°²×°·þÎñÆ÷modÒ»ÖÂ,ÇëÔÚÓÎÏ·Ä¿Â¼ÏÂµÄconfigÎÄ¼þ¼ÐÖÐ´´½¨ÅäÖÃÎÄ¼þqq_bot.json
+- ä¸Žå®‰è£…æœåŠ¡å™¨modä¸€è‡´,è¯·åœ¨æ¸¸æˆç›®å½•ä¸‹çš„configæ–‡ä»¶å¤¹ä¸­åˆ›å»ºé…ç½®æ–‡ä»¶qq_bot.json
 
 ```json
 {
-  "name": "·þÎñÆ÷Ãû³Æ",
+  "name": "æœåŠ¡å™¨åç§°",
   "url": "ws://x.x.x.x:xxxx",
-  "token": "ÁîÅÆ",
+  "token": "ä»¤ç‰Œ"
 }
 ```
 
-ÆäÖÐ¸÷¸ö×Ö¶ÎµÄº¬ÒåÈçÏÂ£º
+å…¶ä¸­å„ä¸ªå­—æ®µçš„å«ä¹‰å¦‚ä¸‹ï¼š
 
-|        ×Ö¶ÎÃû         | ÀàÐÍ  |             º¬Òå              |
+|        å­—æ®µå         | ç±»åž‹  |             å«ä¹‰              |
 |:------------------:|:---:|:---------------------------:|
-|        url         | ×Ö·û´® |       URL£¬ÌîÐ´·þÎñÆ÷µÄURL¡£        |
-|        name        | ×Ö·û´® |        ·þÎñÆ÷Ãû³Æ£¬ÖÐÓ¢ÎÄ¶¼¿É¡£         |
-|       token        | ×Ö·û´® | ¿ÚÁî£¬ºÍ·þÎñÆ÷ÅäÖÃÎÄ¼þÏÂµÄ TOKEN ±£³ÖÒ»ÖÂ¼´¿É¡£ |
+|        url         | å­—ç¬¦ä¸² |       URLï¼Œå¡«å†™æœåŠ¡å™¨çš„URLã€‚        |
+|        name        | å­—ç¬¦ä¸² |        æœåŠ¡å™¨åç§°ï¼Œä¸­è‹±æ–‡éƒ½å¯ã€‚         |
+|       token        | å­—ç¬¦ä¸² | å£ä»¤ï¼Œå’ŒæœåŠ¡å™¨é…ç½®æ–‡ä»¶ä¸‹çš„ TOKEN ä¿æŒä¸€è‡´å³å¯ã€‚ |
 
 > [!TIP]
-> Èô²å¼þÓöµ½ÎÊÌâ£¬»òÓÐ¸üºÃµÄÏë·¨£¬¿ÉÒÔ¼ÓÈë QQ Èº [`962802248`](https://qm.qq.com/q/B3kmvJl2xO) »òÕßÌá½» Issues Ïò×÷Õß·´À¡¡£ÈôÄãÓÐÄÜÁ¦£¬»¶Ó­Îª±¾ÏîÄ¿Ìá¹©´úÂë¹±Ï×£¡
+> è‹¥æ’ä»¶é‡åˆ°é—®é¢˜ï¼Œæˆ–æœ‰æ›´å¥½çš„æƒ³æ³•ï¼Œå¯ä»¥åŠ å…¥ QQ ç¾¤ [`962802248`](https://qm.qq.com/q/B3kmvJl2xO) æˆ–è€…æäº¤ Issues å‘ä½œè€…åé¦ˆã€‚è‹¥ä½ æœ‰èƒ½åŠ›ï¼Œæ¬¢è¿Žä¸ºæœ¬é¡¹ç›®æä¾›ä»£ç è´¡çŒ®ï¼
