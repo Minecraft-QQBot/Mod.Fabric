@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.mcqqbot.fabirc.websocket.LWebSocket;
 import com.mcqqbot.fabirc.websocket.SWebSocket;
 import com.mcqqbot.fabirc.websocket.packets.server.SPlayerJoin;
+import com.mcqqbot.fabirc.websocket.packets.server.SServerStart;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
@@ -70,7 +71,7 @@ public class MinecraftQQBot implements ModInitializer {
 		} catch (URISyntaxException e) {
 			throw new RuntimeException(e);
 		}
-
+		new SServerStart("server_startup", new String[]{""}).run();
 	}
 }
 class H {
