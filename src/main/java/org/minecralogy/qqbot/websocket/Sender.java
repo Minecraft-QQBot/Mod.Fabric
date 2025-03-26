@@ -38,6 +38,7 @@ public class Sender extends WebSocketClient {
     @Override
     public void onOpen(ServerHandshake serverHandshake) {
         LOGGER.info("Sender:Connected to server");
+        this.sendServerStartup();
         task.cancel();
     }
 

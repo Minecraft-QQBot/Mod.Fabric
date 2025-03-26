@@ -39,6 +39,9 @@ public class Bot implements ModInitializer {
         ServerLifecycleEvents.SERVER_STARTED.register((minecraftServer) -> {
             server = minecraftServer;
         });
+        ServerLifecycleEvents.SERVER_STOPPING.register((minecraftServer) -> {
+            Bot.sender.sendServerShutdown();
+        });
         String path = FabricLoader.getInstance().getConfigDir().toAbsolutePath().toString();
         path = path + "\\qq_bot.json";
         LOGGER.info("The bot config:" + path);
