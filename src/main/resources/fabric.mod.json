@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "qqbot",
+  "version": "${version}",
+  "name": "QQBot",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/qqbot/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "org.minecralogy.qqbot.client.BotClient"
+    ],
+    "main": [
+      "org.minecralogy.qqbot.Bot"
+    ]
+  },
+  "mixins": [
+    "qqbot.mixins.json",
+    {
+      "config": "qqbot.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
